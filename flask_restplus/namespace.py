@@ -319,7 +319,7 @@ class Namespace(object):
     @property
     def payload(self):
         '''Store the input payload in the current request context'''
-        return request.get_json()
+        return request.get_json(force=True, silent=True)
 
 
 def unshortcut_params_description(data):
